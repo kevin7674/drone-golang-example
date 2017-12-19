@@ -13,11 +13,11 @@ pipeline:
     image: golang
     commands:
       - make fmt-check
-      - make test
+      #- make test
 
-facebook:
-  image: appleboy/drone-facebook
-  secrets: [ fb_page_token, fb_verify_token ]
-  to: 1234973386524610
-  when:
-    status: [ changed, failure ]
+  facebook:
+    image: appleboy/drone-facebook
+    secrets: [ fb_page_token, fb_verify_token ]
+    to: 1234973386524610
+    when:
+      status: [ changed, failure ]
