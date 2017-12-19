@@ -13,7 +13,7 @@ pipeline:
     image: golang
     commands:
       - make fmt-check
-      #- make test
+      - make test
 
   facebook:
     image: appleboy/drone-facebook
